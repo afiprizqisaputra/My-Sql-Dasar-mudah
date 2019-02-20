@@ -3,17 +3,13 @@ My Sql Dasar
 Nama  : Afip Rizqi Saputra
 Kelas : Ti.17.D1
 Nim   : 311710384
-
 Berikut adalah sql kode untuk vidio youtube sql dasar
-
 1.Membuat database baru dengan nama "Latihan01"
   mysql> create database latihan01;
   Query OK, 1 row affected (0.01 sec)
-  
 2.Perintah "use"
   mysql> use latihan01;
   Database changed
-
 3.Menampilkan basis data
   mysql> use latihan01;
   Database changed
@@ -30,15 +26,12 @@ Berikut adalah sql kode untuk vidio youtube sql dasar
   | test               |
   +--------------------+
   7 rows in set (0.00 sec)
-
 4.Menghapus database
   mysql> drop database latihan01;
   Query OK, 0 rows affected (0.00 sec)
-
 5.Membuat tabel
   mysql> create table biodata(nama varchar(50), alamat text);
   Query OK, 0 rows affected (0.14 sec)
-
 6.Menampilkan struktur tabel
   mysql> desc biodata;
   +--------+-------------+------+-----+---------+-------+
@@ -48,35 +41,28 @@ Berikut adalah sql kode untuk vidio youtube sql dasar
   | alamat | text        | YES  |     | NULL    |       |
   +--------+-------------+------+-----+---------+-------+
   2 rows in set (0.02 sec)
-
 7.Perintah Alter.
   "Menambah file"
   mysql> alter table biodata add column id int(10) first;
   Query OK, 0 rows affected (0.26 sec)
   Records: 0  Duplicates: 0  Warnings: 0
-
   "Mengubah nama file"
   mysql> alter table biodata change alamat alamat_jalan varchar(200);
   Query OK, 0 rows affected (0.12 sec)
   Records: 0  Duplicates: 0  Warnings: 0
-
   "mengubah tipe data"
   mysql> alter table biodata modify alamat_jalan tinytext;
   Query OK, 0 rows affected (0.17 sec)
   Records: 0  Duplicates: 0  Warnings: 0
-
   "menghapus file"
   mysql> alter table biodata drop alamat_jalan;
   Query OK, 0 rows affected (0.17 sec)
   Records: 0  Duplicates: 0  Warnings: 0
-
 8.Menambah index atau key
   mysql> alter table biodata add primary key(id);
   Query OK, 0 rows affected (0.13 sec)
   Records: 0  Duplicates: 0  Warnings: 0
-
 9.Menghapus primary key
   mysql> alter table biodata drop primary key;
   Query OK, 0 rows affected (0.15 sec)
   Records: 0  Duplicates: 0  Warnings: 0
-
